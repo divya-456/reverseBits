@@ -1,0 +1,27 @@
+*{
+    background-color: #0B0D17;
+}
+
+.nav-system {
+    width: 1110px;
+    height: 48px;
+    position: absolute;
+    top: 64px;
+    left: 165px;
+    display: flex;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+}
+.system-text {
+    width: 175px;
+    height: 29px;
+    position: absolute;
+    top: -2px;
+    left: 1026px;
+    font-family: "Barlow Condensed";
+    font-weight: 400;
+    color: #d0d6f9;
+}
