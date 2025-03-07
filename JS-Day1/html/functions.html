@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // no argument, no return
+      function sum() {
+        a = 10;
+        b = 20;
+        document.write(a+b +"<br>");
+      }
+      sum();
+
+      //argument, no return
+      function sum1(a,b) {
+        document.write(a+b + "<br>");
+      }
+      sum1(2,7);
+
+      //argument, return
+      function sum2(a,b) {
+        return a+b;
+      }
+      x = sum2(4,9);
+      document.write(x + "<br>");
+
+      //no argument, return
+      function sum3() {
+        a = 20;
+        b = 20;
+        return a+b;
+      }
+      x = sum3()
+      document.write(x)
+
+    </script>
+  </head>
+  <body></body>
+</html>
