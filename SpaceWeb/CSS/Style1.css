@@ -1,27 +1,625 @@
-*{
-    background-color: #0B0D17;
+* {
+  background-color: #0b0d17;
 }
 
 .nav-system {
-    width: 1110px;
-    height: 48px;
-    position: absolute;
-    top: 64px;
-    left: 165px;
-    display: flex;
+  width: 1110px;
+  height: 48px;
+  position: absolute;
+  top: 64px;
+  left: 215px;
+  display: flex;
 }
 
 .logo {
-    width: 48px;
-    height: 48px;
+  width: 48px;
+  height: 48px;
 }
 .system-text {
-    width: 175px;
-    height: 29px;
-    position: absolute;
-    top: -2px;
-    left: 1026px;
-    font-family: "Barlow Condensed";
-    font-weight: 400;
-    color: #d0d6f9;
+  width: 175px;
+  height: 29px;
+  position: absolute;
+  top: -2px;
+  left: 1026px;
+  font-family: "Barlow Condensed";
+  font-weight: 400;
+  color: #d0d6f9;
+}
+
+.section1,
+.section2,
+.section3 {
+  position: absolute;
+  width: 156px;
+  height: 34px;
+  display: flex;
+}
+.section1 {
+  top: 212px;
+  left: 214.5px;
+}
+.section2 {
+  top: 638px;
+  left: 214.5px;
+}
+
+.section3 {
+  width: 348px;
+  top: 1662px;
+  left: 214.5px;
+}
+
+.text1 {
+  width: 26px;
+  height: 34px;
+  opacity: 25%;
+  font-family: "Barlow Condensed";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 4.72px;
+  color: #ffffff;
+}
+
+.text2 {
+  width: 97px;
+  height: 34px;
+  color: #ffffff;
+  position: relative;
+  left: 54px;
+  font-family: "Barlow Condensed";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 4.72px;
+  text-transform: uppercase;
+}
+
+.section3 .text2 {
+  width: 322px;
+}
+
+.color-display {
+  width: 1111px;
+  height: 196px;
+  position: absolute;
+  top: 294px;
+  left: 214px;
+  display: flex;
+}
+.color1 {
+  width: 351px;
+  height: 196px;
+  position: absolute;
+}
+.color2 {
+  width: 351px;
+  height: 196px;
+  position: absolute;
+  left: 380px;
+}
+
+.color3 {
+  width: 351px;
+  height: 196px;
+  position: absolute;
+  left: 760px;
+}
+
+.given-color1,
+.given-color2,
+.given-color3 {
+  width: 350px;
+  height: 116px;
+  position: absolute;
+}
+.given-color1 {
+  border: 1px solid #616476;
+  background-color: #0b0d17;
+}
+.given-color2 {
+  background-color: #d0d6f9;
+}
+.given-color3 {
+  background-color: #ffffff;
+}
+
+.color-hash1,
+.color-hash2,
+.color-hash3 {
+  width: 87px;
+  height: 28px;
+  position: absolute;
+  top: 64px;
+  left: 23.5px;
+  font-family: "Bellefair";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 0%;
+  text-transform: uppercase;
+}
+
+.color-hash1 {
+  color: #ffffff;
+}
+
+.color-hash2 {
+  color: #0b0d17;
+  background-color: #d0d6f9;
+}
+
+.color-hash3 {
+  color: #0b0d17;
+  background-color: #ffffff;
+}
+
+.rgbcolor {
+  display: flex;
+  width: 160px;
+  height: 32px;
+  position: absolute;
+  top: 119px;
+}
+
+.rgb-text {
+  width: 34px;
+  height: 32px;
+  font-family: "Barlow";
+  font-weight: 400;
+  color: #d0d6f9;
+  line-height: 32px;
+  font-size: 18px;
+}
+
+.rgb-color {
+  width: 64px;
+  height: 32px;
+  color: #ffffff;
+  position: absolute;
+  left: 96px;
+  font-family: "Barlow";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.hslcolor {
+  width: 207px;
+  height: 25px;
+  position: absolute;
+  display: flex;
+  top: 162px;
+}
+
+.hsl-text {
+  width: 33px;
+  height: 13px;
+  font-family: "Barlow";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 6px;
+  color: #d0d6f9;
+}
+
+.hsl-color {
+  width: 111px;
+  height: 13px;
+  position: absolute;
+  left: 96px;
+  color: #ffffff;
+  font-family: "Barlow";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 6px;
+}
+
+.typography {
+  width: 1129px;
+  height: 759px;
+  position: absolute;
+  top: 720px;
+  left: 214px;
+  /* border: 1px solid red; */
+  display: flex;
+}
+
+.planets {
+  width: 532px;
+  height: 759px;
+  /* border: 1px solid blue; */
+}
+
+.info {
+  width: 558.5px;
+  height: 732px;
+  position: relative;
+  left: 35px;
+  /* border: 1px solid green; */
+}
+.earth {
+  width: 474px;
+  height: 212px;
+  position: absolute;
+}
+
+.venus {
+  width: 320px;
+  height: 155px;
+  position: relative;
+  top: 209px;
+  /* border: 1px solid blue; */
+}
+
+.jupiter {
+  width: 490px;
+  height: 105px;
+  position: relative;
+  top: 215px;
+}
+
+.uranus {
+  width: 439px;
+  height: 77px;
+  position: relative;
+  top: 230px;
+}
+
+.travel {
+  width: 532px;
+  height: 74px;
+  position: relative;
+  top: 253px;
+}
+
+.head1,
+.head2,
+.head3,
+.head4,
+.head5 {
+  height: 32px;
+  color: #d0d6f9;
+  font-family: "Barlow";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+}
+.head1 {
+  width: 275px;
+}
+.head2 {
+  width: 280px;
+}
+.head3 {
+  width: 271px;
+}
+.head4 {
+  width: 272px;
+}
+.head5 {
+  width: 532px;
+}
+
+.earth-text,
+.venus-text,
+.jupiter-saturn-text,
+.uranus-neptune-pluto-text,
+.travel-text {
+  position: absolute;
+  top: 45px;
+  /* left: 5px; */
+  font-family: "Bellefair";
+  font-weight: 400;
+  line-height: 100%;
+  color: #ffffff;
+}
+
+.earth-text {
+  width: 470px;
+  height: 172px;
+  font-size: 150px;
+  margin: 0px;
+}
+.venus-text {
+  width: 320px;
+  height: 115px;
+  font-size: 100px;
+  margin: 0px;
+}
+.jupiter-saturn-text {
+  width: 486px;
+  height: 64px;
+  font-size: 56px;
+  margin: 0px;
+}
+.uranus-neptune-pluto-text {
+  width: 437px;
+  height: 37px;
+  font-size: 32px;
+  margin: 0px;
+}
+.travel-text {
+  color: #d0d6f9;
+  width: 472px;
+  height: 34px;
+  font-size: 28px;
+  margin: 0;
+  letter-spacing: 4.72px;
+}
+
+.subheading1 {
+  /* border: 1px solid purple; */
+  width: 297.5px;
+  height: 72px;
+  position: relative;
+}
+.subheading2 {
+  /* border: 1px solid yellow; */
+  width: 558px;
+  height: 57px;
+  position: relative;
+  top: 40px;
+}
+.subheading3 {
+  /* border: 1px solid green; */
+  width: 511px;
+  height: 59px;
+  position: relative;
+  top: 80px;
+}
+.subheading4 {
+  /* border: 1px solid white; */
+  width: 540px;
+  height: 424px;
+  position: relative;
+  top: 120px;
+}
+
+.subhead1-text,
+.subhead2-text,
+.subhead3-text,
+.subhead4-text {
+  height: 32px;
+  position: relative;
+  font-family: "Barlow";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: #d0d6f9;
+  left: 0.5px;
+}
+
+.subhead1-text {
+  width: 297px;
+}
+
+.subhead2-text {
+  width: 557px;
+}
+.subhead3-text {
+  width: 508px;
+}
+.subhead4-text {
+  width: 77px;
+  opacity: 50%;
+}
+
+.subhead1-description,
+.subhead2-description,
+.subhead3-description,
+.subhead4-description {
+  position: relative;
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.subhead1-description {
+  width: 143px;
+  height: 32px;
+  top: -10px;
+  margin: 0;
+  font-family: "Bellefair";
+  font-size: 28px;
+}
+.subhead2-description {
+  width: 107px;
+  height: 17px;
+  left: 0.5px;
+  letter-spacing: 2.36px;
+  font-family: "Barlow Condensed";
+  font-size: 14px;
+}
+.subhead3-description {
+  width: 56px;
+  height: 19px;
+  letter-spacing: 2.7px;
+  font-family: "Barlow Condensed";
+  font-size: 16px;
+}
+.subhead4-description {
+  width: 540px;
+  height: 384px;
+  font-family: "Barlow";
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.navigation-bar {
+  position: absolute;
+  width: 1111px;
+  height: 160px;
+  top: 1796px;
+  left: 164px;
+  /* border: 1px solid red; */
+}
+
+.example {
+  width: 1111px;
+  height: 96px;
+  /* border: 1px solid white; */
+  /* background-color: rgba(0, 0, 0, 0.19); */
+  background-color: #ffffff0a;
+}
+.nav-below-text {
+  position: absolute;
+  width: 262px;
+  height: 32px;
+  top: 128px;
+  left: 425px;
+  font-family: "Barlow";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: #d0d6f9;
+}
+
+.active {
+  position: absolute;
+  width: 85px;
+  height: 57px;
+  top: 39px;
+  left: 295px;
+  /* background-color: rgba(0, 0, 0, 0.19); */
+}
+
+.hovered {
+  position: absolute;
+  width: 98px;
+  height: 19px;
+  top: 39px;
+  left: 517px;
+}
+
+.idle {
+  position: absolute;
+  width: 64;
+  height: 19;
+  top: 39px;
+  left: 752px;
+}
+
+.active-text {
+  width: 84px;
+  height: 19px;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.19);
+  position: absolute;
+  top: -13px;
+}
+
+.active-rectangle {
+  position: absolute;
+  width: 85px;
+  height: 3px;
+  top: 53px;
+  /* left: 295px; */
+  background-color: #fff;
+}
+
+.hover-rectangle {
+  position: absolute;
+  width: 98px;
+  height: 3px;
+  top: 53px;
+  /* left: 517px; */
+  opacity: 0.5;
+  background-color: #fff;
+}
+
+.text-1 {
+  width: 18px;
+  height: 19px;
+  color: #fff;
+  font-family: "Barlow Condensed";
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 2.7px;
+  /* background-color: rgba(0, 0, 0, 0.19); */
+}
+
+.text-2 {
+  position: absolute;
+  width: 52px;
+  height: 19px;
+  color: #fff;
+  left: 29px;
+  font-family: "Barlow Condensed";
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 2.7px;
+  /* background-color: rgba(0, 0, 0, 0.19); */
+}
+
+.diagrams {
+  height: 866px;
+  width: 985px;
+  position: absolute;
+  top: 2031px;
+  left: 214px;
+  /* border: 1px solid red; */
+}
+
+.photo {
+  /* border: 1px solid white; */
+  /* position: absolute; */
+  width: 450px;
+  height: 866px;
+  /* top: 2031px; */
+  /* left: 164px; */
+}
+
+.explore {
+  position: absolute;
+  width: 148px;
+  height: 37px;
+  top: 89px;
+  left: 62px;
+  background-color: transparent;
+  font-family: "Bellefair";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 2px;
+}
+
+.hover-circle {
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  top: 371px;
+  border-radius: 50%;
+  background-color: #ffffff1B;
+  /* opacity: 10.36%; */
+}
+
+.white-circle {
+  width: 274px;
+  height: 274px;
+  position: absolute;
+  left: 88px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.second {
+  top: 88px;
+}
+
+.main-idle {
+  position: absolute;
+  width: 245px;
+  height: 32px;
+  top: 287px;
+  left: 104px;
+  font-family: "Barlow";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  color: #d0d6f9;
+}
+
+.main-hover {
+    top: 834px;
 }

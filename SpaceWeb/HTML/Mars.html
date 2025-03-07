@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/style2.css">
+    <!-- <link rel="stylesheet" href="../CSS/style1.css"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+
+    <!-- Imported Fonts - Barlow Condensed  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Imported Fonts - Bellefair  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <input type="checkbox" style="display: none;" id="toggle-moon">
+    <input type="checkbox" style="display: none;" id="toggle-mars">
+    <input type="checkbox" style="display: none;" id="toggle-europa">
+    <input type="checkbox" style="display: none;" id="toggle-titan">
+
+    
+    <div class="main">
+        <div class="nav">
+            <img src="../Images/logo.png" class="logo" alt="">
+            <div class="straight-line"></div>
+            <div class="nav-rect">
+                <div class="elements">
+                    <div class="element1">
+                        <p class="text1">00</p>
+                        <p class="text2">HOME</p>
+                    </div>
+                    <div class="element2">
+                        <p class="text1">01</p>
+                        <p class="text2">DESTINATION</p>
+                    </div>
+                    <div class="element3">
+                        <p class="text1">02</p>
+                        <p class="text2">CREW</p>
+                    </div>
+                    <div class="element4">
+                        <p class="text1">03</p>
+                        <p class="text2">TECHNOLOGY</p>
+                    </div>
+                </div>
+                <div class="active-rect">
+
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="left-side">
+                <div class="Heading">
+                    <p class="text-1">01</p>
+                    <p class="text-2">Pick your destination</p>
+                </div>
+                <img class="planet-image moon-toggle" src="../Images/moon.png" alt="">
+                <img class="planet-image mars-toggle" src="../Images/Mars.png" alt="">
+                <img class="planet-image europa-toggle" src="../Images/Europa.png" alt="">
+                <img class="planet-image titan-toggle" src="../Images/Titan.png" alt="">
+            </div>
+            <div class="right-side">
+                <div class="nav-planets">
+                    <label for="toggle-moon">
+                        <p class="moon">MOON</p>
+                    </label>
+                    <label for="toggle-mars">
+                        <p class="mars">MARS</p>
+                    </label>
+                    <label for="europa">
+                        <p class="europa">EUROPA</p>
+                    </label>
+                    <label for="titan">
+                        <p class="titan">TITAN</p>
+                    </label>
+                </div>
+                <div class="planet-active"></div>
+                <p class="planet-name">MARS</p>
+                <p class="planet-description">Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!</p>
+                <div class="planet-line"></div>
+                <div class="info">
+                    <div class="avg">
+                        <p class="distance-title">AVG. DISTANCE</p>
+                        <p class="distance-value">225 MIL. km</p>
+                    </div>
+                    <div class="time">
+                        <p class="time-title">Est. travel time</p>
+                        <p class="time-value">9 months</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

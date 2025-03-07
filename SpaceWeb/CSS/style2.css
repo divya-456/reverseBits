@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+}
+.main {
+  height: 130vh;
+  width: 98.9vw;
+  background-image: url("../Images/spacebg.png");
+  z-index: -1;
+}
+.logo {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 8px;
+  left: 55px;
+}
+
+.nav {
+  width: 1385px;
+  height: 96px;
+  position: absolute;
+  top: 40px;
+  left: 55px;
+  display: flex;
+}
+
+.straight-line {
+  position: absolute;
+  width: 473px;
+  height: 1px;
+  top: 32px;
+  left: 167px;
+  opacity: 0.25;
+  background-color: #ffffff;
+  z-index: 3;
+}
+
+.nav-rect {
+  width: 830px;
+  height: 96px;
+  position: absolute;
+  top: -16px;
+  left: 610px;
+  background-color: #ffffff0a;
+  backdrop-filter: blur(81.54845428466797px);
+  z-index: 1;
+}
+.elements {
+  display: flex;
+  width: 542px;
+  position: absolute;
+  height: 19px;
+  top: 23px;
+  left: 133px;
+}
+
+.element1,
+.element2,
+.element3,
+.element4 {
+  display: flex;
+  height: 19px;
+  position: relative;
+  top: 17px;
+}
+.element1 {
+  left: 20px;
+  width: 70px;
+}
+.element2 {
+  left: 60px;
+  width: 130px;
+}
+.element3 {
+  left: 97px;
+  width: 71px;
+}
+.element4 {
+  left: 130px;
+  width: 127px;
+}
+
+.text1 {
+  width: 18px;
+  height: 19px;
+  font-family: "Barlow Condensed";
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 2.7px;
+  color: #ffffff;
+}
+
+.text2 {
+  width: 39px;
+  height: 19px;
+  position: absolute;
+  left: 29px;
+  font-family: "Barlow Condensed";
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 2.7px;
+  color: #ffffff;
+}
+
+.active-rect {
+  width: 127px;
+  height: 3px;
+  position: absolute;
+  top: 93px;
+  left: 263px;
+  background-color: #ffffff;
+}
+
+.content {
+  width: 1110.5px;
+  height: 576px;
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 212px;
+  left: 166.5px;
+}
+
+.left-side {
+  height: 576px;
+  width: 508.5px;
+  /* border: 1px solid green; */
+}
+.Heading {
+  width: 382px;
+  height: 34px;
+  position: absolute;
+  top: 18px;
+  left: 26.5px;
+  display: flex;
+}
+.text-1 {
+  width: 26px;
+  height: 34px;
+  opacity: 0.25;
+  font-family: "Barlow Condensed";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 4.72px;
+  color: #ffffff;
+}
+
+.text-2 {
+  width: 326px;
+  height: 34px;
+  position: absolute;
+  left: 54px;
+  font-family: "Barlow Condensed";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 4.72px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.planet-image {
+  width: 445px;
+  height: 445px;
+  position: absolute;
+  top: 129px;
+  left: 63px;
+}
+
+.right-side {
+  width: 445px;
+  height: 472px;
+  position: absolute;
+  top: 78px;
+  left: 663px;
+  /* border: 1px solid blue; */
+}
+.nav-planets {
+  display: flex;
+  width: 285px;
+  height: 34px;
+  position: absolute;
+  left: 0.5px;
+}
+.moon,
+.mars,
+.europa,
+.titan {
+  font-family: Barlow Condensed;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 2.7px;
+  color: #d0d6f9;
+  position: absolute;
+}
+.moon {
+  width: 39px;
+  height: 19px;
+}
+.mars {
+  width: 37px;
+  height: 19px;
+  left: 74px;
+}
+.europa {
+  width: 56px;
+  height: 19px;
+  left: 147px;
+}
+.titan {
+  width: 42px;
+  height: 19px;
+  left: 239px;
+}
+.planet-active {
+  width: 41px;
+  height: 3px;
+  position: absolute;
+  top: 31px;
+  left: 72.5px;
+  background-color: #ffffff;
+}
+
+.planet-name {
+  width: 273px;
+  height: 115px;
+  position: absolute;
+  top: 71px;
+  left: 0.5px;
+  font-family: Bellefair;
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+
+.planet-description {
+  width: 444px;
+  height: 128px;
+  position: absolute;
+  top: 200px;
+  font-family: Barlow;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  color: #d0d6f9;
+}
+
+.planet-line {
+  width: 444px;
+  height: 1px;
+  position: absolute;
+  top: 382px;
+  left: 1px;
+  background-color: #383b4b;
+}
+
+.info {
+  display: flex;
+  width: 365px;
+  height: 61px;
+  /* border: 1px solid pink; */
+  position: absolute;
+  top: 411px;
+  left: 0.5px;
+}
+
+.avg {
+  width: 153px;
+  height: 61px;
+}
+.time {
+  width: 144px;
+  height: 61px;
+  position: absolute;
+  left: 221px;
+  /* border: 1px solid white; */
+}
+
+.distance-title {
+  width: 99px;
+  height: 17px;
+  font-family: Barlow Condensed;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 2.36px;
+  text-transform: uppercase;
+  color: #d0d6f9;
+}
+.distance-value {
+  width: 153px;
+  height: 32px;
+  position: absolute;
+  top: 29px;
+  font-family: Bellefair;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.time-title {
+  width: 121px;
+  height: 17px;
+  font-family: Barlow Condensed;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 2.36px;
+  text-transform: uppercase;
+  color: #d0d6f9;
+}
+.time-value {
+  width: 144px;
+  height: 32px;
+  position: absolute;
+  top: 29px;
+  font-family: Bellefair;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+
+.mars-toggle {
+  display: block;
+}
+.moon-toggle, .europa-toggle, .titan-toggle {
+  display: none;
+}
+
+#toggle-moon:checked ~ * .moon-toggle {
+  display: block;
+}
+
+#toggle-moon:checked ~ * .mars-toggle,.europa-toggle,.titan-toggle {
+  display: none;
+}
+#toggle-moon:checked ~ * .moon-toggle {
+  display: block;
+}
+
+#toggle-moon:checked ~ * .mars-toggle,.europa-toggle,.titan-toggle {
+  display: none;
+}
