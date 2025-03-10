@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        background-color: black;
+        height: 100px;
+        width: 100px;
+      }
+    </style>
+    <script>
+      function yellow(x) {
+        x.style.backgroundColor = "yellow";
+      }
+      function red(x) {
+        x.style.backgroundColor = "red";
+      }
+    </script>
+  </head>
+  <body>
+    <div onmouseup="red(this)" onmousedown="yellow(this)"></div>
+  </body>
+</html>

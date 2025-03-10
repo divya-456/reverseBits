@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function focused() {
+        myform.txt1.style.backgroundColor = "yellow";
+      }
+      function unfocused() {
+        myform.txt1.style.backgroundColor = "green";
+      }
+      function msg() {
+        alert("Form was submitted!");
+      }
+      function changed(){
+        alert(`You selected ${myform.lang.value}`)
+      }
+    </script>
+  </head>
+  <body>
+    <form id="myform" onsubmit="msg()">
+      <input type="text" name="txt1" onfocus="focused()" onblur="unfocused()" />
+      <select name="lang" id="" onchange="changed()">
+        <option value="C">C</option>
+        <option value="C++">C++</option>
+      </select>
+      <input type="submit" value="submit" />
+    </form>
+  </body>
+</html>

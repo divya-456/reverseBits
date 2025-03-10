@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        function setValue() {
+            var a = myform.txt1.value;
+            myform.txt2.value = a;
+        }
+    </script>
+  </head>
+  <body>
+    <form id="myform">
+        Name : <input type="text" name="txt1"><br>
+        Value : <input type="text" value="" name="txt2" disabled readonly><br>
+        <input type="button" value="Set Value" onclick="setValue()">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showMenu() {
+            var answer = confirm("Do you want to continue?");
+
+            if (answer==true) {
+                document.write("Ok button clicked!");
+                window.location = "https://www.google.com"
+            } else {
+                document.write("Cancel button clicked!")
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="showMenu()">Click me</button>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getSum() {
+            num1 = parseInt(myform.txt1.value);
+            num2 = parseInt(myform.txt2.value);
+
+            document.write(`Your sum is ${num1+num2}`)
+        }
+    </script>
+</head>
+<body>
+    <form id="myform">
+        Number 1 : <input type="text" name="txt1">
+        Number 2 : <input type="text" name="txt2">
+        <input type="button" value="Get Sum" onclick="getSum()">
+    </form>
+</body>
+</html>

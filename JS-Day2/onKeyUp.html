@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function keyUp() {
+        alert("Key is up!");
+      }
+
+      function keyDown() {
+        alert("Key is down!");
+      }
+      function capitalize() {
+        form1.txt.value = form1.txt.value.toUpperCase();
+      }
+      function press() {
+        alert("Key is pressed!");
+      }
+    </script>
+  </head>
+  <body>
+    Up: <input type="text" onkeyup="keyUp()" /> Down :
+    <input type="text" onkeydown="keyDown()" />
+    <br />
+    <form name="form1">
+      uppercase: <input type="text" name="txt" onkeyup="capitalize()" />
+    </form>
+    Key Press : <input type="text" onkeypress="press()" />
+  </body>
+</html>
