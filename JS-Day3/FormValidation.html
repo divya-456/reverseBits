@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function ValidateText(e) {
+        e.preventDefault();
+        var n = frm.name.value;
+
+        if (n.trim() == "" || n == null) {
+          alert("Enter a name!");
+          return false;
+        }
+        return true;
+      }
+
+      function ValidateNumber(e) {
+        e.preventDefault();
+        var n = frm1.num.value;
+
+        if (n.trim() == "" || n == null) {
+          alert("Enter a number!");
+          return false;
+        } else if (isNaN(n)) {
+          alert("Not a number");
+          return false;
+        }
+        return true;
+      }
+
+      function validateGender(e) {
+        e.preventDefault();
+        var x = document.getElementsByName("gender");
+        document.write(document.frm2.gender.length);
+        var flag = 0;
+        for (i = 0; i < x.length; i++) {
+          if (x[i].checked == true) {
+            flag = 1;
+            break;
+          }
+        }
+        if (flag == 0) {
+          alert("Please select a gender!");
+          return false;
+        }
+        return true;
+      }
+
+      function validateCity(e) {
+        e.preventDefault();
+        if (document.frm3.city.value == "-1") {
+          alert("Please select a value!");
+          return false;
+        }
+        return true;
+      }
+
+      function validateEmail(e) {
+        e.preventDefault();
+        var x = document.frm4.email.value;
+        if (
+          x.indexOf("@") < 1 ||
+          x.lastIndexOf(".") < x.indexOf("@") + 2 ||
+          x.length <= x.lastIndexOf(".") + 2
+        ) {
+          alert("Please enter a valid email address!");
+        }
+      }
+
+      //emailreg: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w+{2,3})+$/
+
+      function validatePassword(e) {
+        e.preventDefault();
+        pass = document.frm5.pass.value;
+        cpass = document.frm5.cpass.value;
+
+        if (pass != cpass) {
+          alert("Password and Confirm password not same!");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form name="frm" onsubmit="ValidateText(event)">
+      Enter name : <input name="name" type="text" />
+      <input type="submit" value="Submit" />
+    </form>
+    <form name="frm1" onsubmit="ValidateNumber(event)">
+      Enter mobile : <input name="num" type="text" />
+      <input type="submit" value="Submit" />
+    </form>
+    <form name="frm2" onsubmit="validateGender(event)">
+      Gender:
+      <input type="radio" name="gender" />Male
+      <input type="radio" name="gender" />Female
+      <input type="submit" value="Submit" />
+    </form>
+    <form name="frm3" onsubmit="validateCity(event)">
+      <select name="city" id="">
+        <option value="-1">---Select city---</option>
+        <option value="Ahmedabad">Ahmedabad</option>
+        <option value="Gandhinagar">Gandhinagar</option>
+        <option value="Vadodara">Vadodara</option>
+      </select>
+      <input type="submit" value="submit" />
+    </form>
+    <form name="frm4" onsubmit="validateEmail(event)">
+      Email : <input type="text" name="email" />
+      <input type="submit" value="Submit" />
+    </form>
+    <form name="frm5" onsubmit="validatePassword(event)">
+      <br />
+      Password : <input type="text" name="pass" /><br /><br />
+      Confirm Password : <input type="text" name="cpass" /><br /><br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>

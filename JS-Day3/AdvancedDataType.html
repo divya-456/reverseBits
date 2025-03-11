@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //symbol data type
+        const value1 = Symbol('hello');
+        console.log(value1)
+
+        //object data type
+        var car = {
+            "brand" : "Ford",
+            "Year":1991,
+            "Color":"Red"
+        }
+        document.write(car["brand"]+"<br>");
+        document.write(car.Year +"<br>");
+        document.write(typeof(car)+"<br>");
+
+        //nested loop
+        for(i=0;i<5;i++){
+            for(j=0;j<5;j++){
+                document.write(`${i}, ${j} <br>`)
+            }
+        }
+
+        for(i=1;i<=3;i++){
+            for(j=1;j<=i;j++){
+                document.write("*");
+            }
+            document.write("<br>")
+        }
+
+        //for in loop
+        for(var keys in car){
+            document.write(keys + "<br>");
+        }
+
+        var str = "Hello";
+        for (index in str) {
+            document.write(str[index] + "<br>");
+        }
+        var arr = [1,2,3,4];
+        for(var index in arr){
+            document.write(arr[index] + "<br>");
+        }
+
+        //for of loop
+        for(var value of str){
+            document.write(value+"<br>");
+        }
+
+        for(var value of arr){
+            document.write(value+"<br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

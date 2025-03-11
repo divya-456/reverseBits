@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateForm(e){
+            e.preventDefault();
+            uname = document.login.uname.value;
+            pass = document.login.pass.value;
+            if (uname.trim() == "") {
+                login.uname.style.borderColor = "red";
+                alert("Please enter a username!");
+            } else {
+                login.uname.style.borderColor = "green";
+            }
+            if(pass.trim() == ""){
+                login.pass.style.borderColor = "red";
+                alert("Please enter a password!")
+            }
+            else if(pass.length<5 || pass.length > 5){
+                login.pass.style.borderColor = "red";
+                alert("Please enter a passsword of length 5!")
+            } else {
+                login.pass.style.borderColor = "green";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="login" onsubmit="validateForm(event)">
+        Username : <input type="text" name="uname">
+        <br><br>
+        Password : <input type="text" name="pass">
+        (password must be of length 5)
+        <br><br>
+        <input type="submit">
+    </form>
+</body>
+</html>

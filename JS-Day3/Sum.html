@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //by getElementById
+      function calcSumById() {
+        document.getElementById("ans").innerHTML =
+          "Sum is " +
+          (parseInt(document.getElementById("no1").value) +
+            parseInt(document.getElementById("no2").value));
+      }
+
+      //get ElementByName
+      function calcSumByName() {
+        document.getElementById("ans").innerHTML =
+          "Sum is " +
+          (parseInt(document.getElementsByName("n1")[0].value) +
+            parseInt(document.getElementsByName("n2")[0].value));
+      }
+    </script>
+  </head>
+  <body>
+    No1: <input type="text" id="no1" name="n1" id="" /> No2:
+    <input type="text" name="n2" id="no2" id="" />
+    <button onclick="calcSumById()">SumById</button>
+    <button onclick="calcSumByName()">SumByName</button>
+    <p id="ans"></p>
+  </body>
+</html>

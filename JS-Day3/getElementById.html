@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid black;
+            height: 100px;
+            width: 200px;
+            margin: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+    <script>
+        function change() {
+            var x = document.getElementById("demo");
+            x.style.color = "red";
+            x.style.backgroundColor = "Yellow";
+        }
+        function loadDynamic(){
+            var x = document.getElementById("innertxt");
+            x.innerText = "<b>Dynamic content added!</b>";
+        }
+        function addContent(){
+            var x = document.getElementById("innertxt");
+            var y = document.getElementById("container");
+            y.innerHTML = "<u>"+x.innerText+"</u>";
+        }
+    </script>
+</head>
+<body>
+    <p id="demo">Hello!</p>
+    <button onclick="change()">change</button>
+
+    <p id="innertxt"></p>
+    <button onclick="loadDynamic()">Dynamic</button>
+
+    <div id="container">
+
+    </div>
+    <button onclick="addContent()">Add content</button>
+</body>
+</html>

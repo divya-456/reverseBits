@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        function getCube(){
+            alert(`Your cube is ${Math.pow(document.getElementsByName("n1")[0].value,3)}`);
+        }
+    </script>
+  </head>
+  <body>
+    <form name="frm">
+        Number: <input type="number" name="n1" id=""><br>
+        <input type="button" value="Cube" onclick="getCube()">
+    </form>
+  </body>
+</html>

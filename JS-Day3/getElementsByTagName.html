@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function getCount() {
+        alert(
+          `input tags are: ${document.getElementsByTagName("input").length}`
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <input type="text" />
+      <input type="text" />
+      <input type="text" />
+      <input type="button" value="Click" onclick="getCount()" />
+    </form>
+  </body>
+</html>

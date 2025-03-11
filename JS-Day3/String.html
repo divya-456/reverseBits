@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //declaration
+      var str = "hello";
+      var str1 = new String("hello123");
+
+      document.write(str + "<br>");
+      document.write(str1 + "<br>");
+      document.write("<br>");
+
+      //methods
+
+      //charAt
+      document.write("Char at :" + str.charAt(1) + "<br>");
+      document.write("<br>");
+
+      //concat
+      document.write("Concat : " + str.concat(str1) + "<br>");
+      document.write("<br>");
+
+      //indexOf
+      document.write("index of : " + str.indexOf("o") + "<br>");
+      document.write("<br>");
+
+      str2 = "isrjnbgvjnergvknirsnfrviur";
+      //lastIndexOf
+      document.write("last index of :" + str2.lastIndexOf("i") + "<br>");
+      document.write("<br>");
+
+      //match
+      document.write("match : " + str1.match("hello") + "<BR>");
+      document.write("<br>");
+
+      //replace
+      document.write("replace : " + str1.replace("l", "xyz") + "<BR>");
+      document.write("<br>");
+
+      // search
+      document.write("search : " + str1.search("lo") + "<br>"); // returns index
+      document.write("<br>");
+
+      //slice
+      document.write("Slice : " + str.slice(-2) + "<br>"); //hello
+      document.write("<br>");
+
+      //split
+      str3 = "Hello world";
+      document.write("Split : " + str3.split("o") + "<br>");
+      document.write("<br>");
+
+      //substr
+      document.write("Substr : " + str1.substr(1, 5) + "<br>");
+      document.write("<br>");
+
+      //substring
+      document.write("Substring : " + str3.substring(1, 5) + "<br>");
+      document.write("<br>");
+
+      //tolowercase
+      document.write("Lower case : " + str3.toLowerCase() + "<br>");
+      document.write("<br>");
+
+      //touppercase
+      document.write("Upper case : " + str3.toUpperCase() + "<br>");
+    </script>
+  </head>
+  <body></body>
+</html>
