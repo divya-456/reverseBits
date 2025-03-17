@@ -494,40 +494,39 @@ function onSubmit() {
       validatePassword() &&
       validateConfirmPassword()
     ) {
-      
-      var name = document.getElementById("name"); //name value
-      var email = document.getElementById("signup-email"); //email value
-      var password = document.getElementsByClassName("signup-password")[0]; //password value
-      var confirm_password =
-        document.getElementsByClassName("signup-password")[1]; //password value
-      var successText = document.getElementsByClassName("success-text")[1]; // success text
-      var registeredUserFlag = 0;
-      for (const user of registerUsers) {
-        if (user["email"] == email.value) {
-          registeredUserFlag = 1;
+      if (document.getElementById('termCon').checked) {
+        
+        var name = document.getElementById("name"); //name value
+        var email = document.getElementById("signup-email"); //email value
+        var password = document.getElementsByClassName("signup-password")[0]; //password value
+        var confirm_password =
+          document.getElementsByClassName("signup-password")[1]; //password value
+        var successText = document.getElementsByClassName("success-text")[1]; // success text
+        var registeredUserFlag = 0;
+        for (const user of registerUsers) {
+          if (user["email"] == email.value) {
+            registeredUserFlag = 1;
+          }
         }
-      }
-      if (registeredUserFlag == 1) {
-        alert("Email already taken");
+        if (registeredUserFlag == 1) {
+          alert("Email already taken");
+        } else {
+          registerUsers.push({
+            'name': name.value,
+            'email': email.value,
+            'password': password.value,
+          });
+          name.value = "";
+          email.value = "";
+          password.value = "";
+          confirm_password.value = "";
+          alert("Registered Successfully");
+          successText.classList.add("success");
+        }
+        console.log(registerUsers);
       } else {
-        registerUsers.push({
-          'name': name.value,
-          'email': email.value,
-          'password': password.value,
-        });
-        name.value = "";
-        email.value = "";
-        password.value = "";
-        confirm_password.value = "";
-        alert("Registered Successfully");
-        successText.classList.add("success");
+        alert('Please accept the terms and conditions')
       }
-      console.log(registerUsers);
-      // registerUsers.push({
-      //   "name": name.value,
-      //   "email": email.value,
-      //   "password": password.value,
-      // });
     }
   } else if (container.classList.contains("act")) {
     if (
@@ -560,35 +559,40 @@ function onSubmit() {
     }
   } else {
     if (validateLoginEmail() && validateLoginPassword()) {
-      var email = document.getElementById("login-email"); //email value
-      var password = document.getElementsByClassName("login-password")[0]; //password value
-      var errorText = document.getElementsByClassName("error-text")[2]; // error text
-      var successText = document.getElementsByClassName("success-text")[0]; // success text
-      var existFlag = 0;
-      for (const user of registerUsers) {
-        if (user["email"] == email.value) {
-          existFlag = 1;
-          if (user["password"] == password.value) {
-            existFlag = 2;
-            console.log("Login sucessful1");
+      if (document.getElementById('logCheck').checked) {
+        
+        var email = document.getElementById("login-email"); //email value
+        var password = document.getElementsByClassName("login-password")[0]; //password value
+        var errorText = document.getElementsByClassName("error-text")[2]; // error text
+        var successText = document.getElementsByClassName("success-text")[0]; // success text
+        var existFlag = 0;
+        for (const user of registerUsers) {
+          if (user["email"] == email.value) {
+            existFlag = 1;
+            if (user["password"] == password.value) {
+              existFlag = 2;
+              console.log("Login sucessful1");
+            }
+            break;
           }
-          break;
         }
-      }
-      if (existFlag == 0) {
-        errorText.innerHTML = "Email id does not exist";
-        errorText.classList.add("error");
-        successText.classList.remove("success");
-      } else if (existFlag == 1) {
-        errorText.innerHTML = "Password is incorrect!";
-        errorText.classList.add("error");
-        successText.classList.remove("success");
+        if (existFlag == 0) {
+          errorText.innerHTML = "Email id does not exist";
+          errorText.classList.add("error");
+          successText.classList.remove("success");
+        } else if (existFlag == 1) {
+          errorText.innerHTML = "Password is incorrect!";
+          errorText.classList.add("error");
+          successText.classList.remove("success");
+        } else {
+          alert("Login Successful");
+          errorText.innerHTML = "";
+          successText.innerHTML = "";
+          successText.classList.add("success");
+          errorText.classList.remove("error");
+        }
       } else {
-        alert("Login Successful");
-        errorText.innerHTML = "";
-        successText.innerHTML = "";
-        successText.classList.add("success");
-        errorText.classList.remove("error");
+        alert('Please select remember me')
       }
     }
   }
