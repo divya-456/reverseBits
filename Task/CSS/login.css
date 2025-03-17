@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 html { 
     display: block;
 }
@@ -36,6 +37,11 @@ body {
     transition: height 0.2s ease;
 }
 
+.container .login {
+    z-index: 2;
+    border-radius: 10px;
+}
+
 .container .form {
     width: 50%;
     padding: 30px;
@@ -46,6 +52,12 @@ body {
 .container .signup {
     opacity: 0;
     transition: opacity 0.09s ease;
+}
+
+.container .forget{
+    opacity: 0;
+    transition: opacity 0.09s ease;
+    position: absolute;
 }
 
 .container .form .title {
@@ -59,15 +71,31 @@ body {
 }
 
 .container.active .login {
+    z-index: -1;
     margin-left: -50%;
     opacity: 0;
     transition: margin-left 0.18s ease, opacity 0.15s ease;
 }
 
 .container.active .signup {
+    z-index: 1;
     border-radius: 10px;
     opacity: 1;
     transition: opacity 0.2s ease;
+}
+
+.container.act .login {
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container.act .forget {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+    border-radius: 10px;
+    position: relative;
+    right: 50%;
 }
 
 .form .title::before {
@@ -220,11 +248,29 @@ input[type="text" i]{
     color: red;
     padding: 10px;
 }
+.input-field .left-icon-forget.error {
+    color: red;
+    padding: 10px;
+}
+
+.input-field .left-icon-login.error {
+    color: red;
+    padding: 10px;
+}
 
 .error-text.error {
     color: red;
     margin: 5px;
     font-size: 10px;
+}
+
+.success-text.success {
+    position: absolute;
+    top: 9px;
+    left: 132px;
+    color: green;
+    margin: 5px;
+    font-size: 14px;
 }
 
 .input-field .showError.error{

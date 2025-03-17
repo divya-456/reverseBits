@@ -6,8 +6,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="../CSS/login.css" />
     <script src="../JS/Login.js"></script>
-
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
   </head>
   <body>
     <div class="container" id="outer-div">
@@ -16,19 +18,29 @@
           <span class="title">Login</span>
           <form action="#">
             <div class="input-field">
-              <input type="text" placeholder="Enter your email" required />
-              <i class="uil uil-envelope icon"></i>
+              <input
+                type="text"
+                placeholder="Enter your email"
+                id="login-email"
+                onchange="validateLoginEmail()"
+                required
+              />
+              <i class="uil uil-envelope icon left-icon-login"></i>
+              <i class="uil uil-exclamation-circle showError"></i>
             </div>
+            <p class="error-text"></p>
             <div class="input-field">
               <input
                 type="password"
                 class="login-password"
                 placeholder="Enter your password"
+                onchange="validateLoginPassword()"
                 required
               />
-              <i class="uil uil-lock icon"></i>
-              <i class="uil uil-eye-slash showHidePw"></i>
+              <i class="uil uil-lock icon left-icon-login"></i>
+              <i class="uil uil-eye-slash showHidePw" onclick="showLoginPassword()"></i>
             </div>
+            <p class="error-text"></p>
             <div class="checkbox-text">
               <div class="checkbox-content">
                 <label for="logCheck" class="text">
@@ -36,18 +48,20 @@
                   Remember me
                 </label>
               </div>
-              <a href="#" class="text">Forgot password?</a>
+              <a href="#" class="text" onclick="changeForget()">Forgot password?</a>
             </div>
+            <p class="error-text"></p>
+            <p class="success-text"></p>
             <div class="input-field button">
-              <input type="button" value="Login" />
+              <input type="button" onclick="onSubmit()" value="Login" />
             </div>
           </form>
           <div class="login-signup">
             <span class="text">
               Not a member?
-              <span onclick="changeForm()">
-                  <a href="#" class="text signup-link">Signup Now</a>
-              </span>
+              <a href="#" onclick="change_Form()" class="text signup-link"
+                >Signup Now</a
+              >
             </span>
           </div>
         </div>
@@ -55,17 +69,29 @@
           <span class="title">Registration</span>
           <form action="#">
             <div class="input-field">
-              <input type="text" placeholder="Enter your name" id="name" onchange="validateName()" required/>
+              <input
+                type="text"
+                placeholder="Enter your name"
+                id="name"
+                onchange="validateName()"
+                required
+              />
               <i class="uil uil-user left-icon-signup"></i>
               <i class="uil uil-exclamation-circle showError"></i>
             </div>
             <p class="error-text"></p>
             <div class="input-field">
-              <input type="text" placeholder="Enter your email" id="signup-email" onchange="validateEmail()" required />
+              <input
+                type="text"
+                placeholder="Enter your email"
+                id="signup-email"
+                onchange="validateEmail()"
+                required
+              />
               <i class="uil uil-envelope icon left-icon-signup"></i>
               <i class="uil uil-exclamation-circle showError"></i>
             </div>
-            <p class="error-text"></p>
+            <p class="error-text"></p>  
             <div class="input-field">
               <input
                 type="password"
@@ -87,7 +113,10 @@
                 required
               />
               <i class="uil uil-lock icon left-icon-signup"></i>
-              <i class="uil uil-eye-slash showHidePw"></i>
+              <i
+                class="uil uil-eye-slash showHidePw"
+                onclick="showSignupPassword()"
+              ></i>
             </div>
             <p class="error-text"></p>
             <div class="checkbox-text">
@@ -98,17 +127,75 @@
                 </label>
               </div>
             </div>
+            <p class="success-text"></p>
             <p class="checkbox"></p>
             <div class="input-field button">
-              <input type="button" value="Signup" />
+              <input type="button" value="Signup" onclick="onSubmit()" />
             </div>
           </form>
           <div class="login-signup">
             <span class="text">
               Already a member?
-              <span onclick="changeForm()">
-                  <a href="#" class="text login-link">Login Now</a>
-              </span>
+              <a href="#" onclick="change_Form()" class="text login-link"
+                >Login Now</a
+              >
+            </span>
+          </div>
+        </div>
+        <div class="form forget">
+          <span class="title">Forget Password</span>
+          <form action="#">
+            <p class="error-text"></p>
+            <div class="input-field">
+              <input
+                type="text"
+                placeholder="Enter your email"
+                id="forget-email"
+                onchange="validateForgetEmail()"
+                required
+              />
+              <i class="uil uil-envelope icon left-icon-forget"></i>
+              <i class="uil uil-exclamation-circle showError"></i>
+            </div>
+            <p class="error-text"></p>
+            <div class="input-field">
+              <input
+                type="password"
+                class="forget-password"
+                placeholder="Create a new password"
+                required
+                onchange="validateForgetPassword()"
+              />
+              <i class="uil uil-lock left-icon-forget"></i>
+              <i class="uil uil-exclamation-circle showError"></i>
+            </div>
+            <p class="error-text"></p>
+            <div class="input-field">
+              <input
+                type="password"
+                class="forget-password"
+                placeholder="Confirm the password"
+                onchange="validateForgetConfirmPassword()"
+                required
+              />
+              <i class="uil uil-lock icon left-icon-forget"></i>
+              <i
+                class="uil uil-eye-slash showHidePw"
+                onclick="showForgetPassword()"
+              ></i>
+            </div>
+            <p class="error-text"></p>
+            <p class="success-text"></p>
+            <div class="input-field button">
+              <input type="button" value="Confirm" onclick="onSubmit()" />
+            </div>
+          </form>
+          <div class="login-signup">
+            <span class="text">
+              Don't want to change password?
+              <a href="#" onclick="changeForget()" class="text login-link"
+                >Back to login</a
+              >
             </span>
           </div>
         </div>
